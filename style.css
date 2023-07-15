@@ -1,73 +1,257 @@
-body{
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/* INITIALS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+html {
+  scroll-behavior: smooth;
 }
 
-#title{
-    flex-direction: column;
-    line-height: 10px;
-    font-weight: bolder;
-
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-li{
-    display: inline-block;
-    margin: 20px;
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: lightgray; 
 }
 
-a{
-    color: white;
-    text-decoration: none;
+main {
+  width: 100%vh;
 }
 
-a:hover{
-    color: yellow;
-    transition: 0.3s all ;
+/* HEADER */
+
+header {
+color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color:black;
+  box-shadow: 0 1px 0 #ececec;
+  max-width:100%vh;
+  width: 95%;
+  
 }
 
-#contato-btn{
-    border: 2px solid yellow;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 5px;
+.nav-list {
+  display: flex;
+  gap: 30px;
+  color: white;
 }
 
-#contato-btn:hover{
-    background-color: yellow;
-    color: black;
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
-h1{
-    font-weight: 200;
+/* HOME */
+
+section#home {
+  height: calc(100vh + 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 20px;
+  width: 100%;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+.home-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: justify;
 }
 
-h2{
-    font-size: 32px;
-    line-height: 50px;
+.home-info button {
+  border: none;
+  width: 150px;
+  padding: 10px;
+  background-color: yellow;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 5px;
 }
 
-span{
-    font-weight: bold;
-    color: yellow;
+.home-info button a{
+  color: black;
 }
 
-img{
-    width: 580px;
+.home-info button:hover{
+  opacity: 1;
+}
+
+.home-img {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 300px;
+  height: 300px;
+
+  box-shadow: 0 1px 5px;
+  border-radius: 30%;
+}
+
+/* PROJECTS */
+
+section#projects {
+  height: calc(100vh + 80px);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.project-img {
+  width: 40%;
+}
+
+.project-img img {
+  box-shadow: 0 1px 2px #0003;
+  object-fit: cover;
+  width: 80%;
+}
+
+.project-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.swiper {
+  width: 95vw;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  color: #7700ff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7700ff ;
+}
+
+
+/* CONTACTS */
+
+#contato {
+  height: calc(100vh + 80px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+input, textarea, button {
+  box-shadow: 0 1px 2px #ddd;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+#contato form button {
+  background-color: yellow;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#contato form button:hover{
+  opacity: 1;
+}
+
+/* FOOTER */
+
+footer {
+  box-shadow: 0px -1px 0px 0px #ececec;
+  padding: 10px;
+  text-align: center;
+  height: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 450px) {
+  header {
+    justify-content: center;
+  }
+  
+  .logo {
+    display: none;
+  }
+
+  section#home {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .home-info, .home-img {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .swiper-slide {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .project-img {
+    width: 100%;
+  }
+ 
+  .project-info {
+    width: 80%;
+  }
 }

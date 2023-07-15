@@ -4,39 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link  href="media.css" rel="stylesheet">
-    <style></style>
-    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="style.css" rel="stylesheet"media="all">
+    <title>Lucas Gaio</title>
     </head>
 <body>
+    <main>
+    <!--Header-->
     <header>
         <div id="title">
             <h1>Lucas</h1>
             <h1>Gaio</h1>
         </div>
-        <ul>
-            <a href="#"><li>Home</li></a>
-            <a href="#">
-                <li>Sobre</li>
-            </a>
-            <a href="#">
-                <li>Projetos</li>
-            </a>
-            <a href="#" id="contato-btn">
-                <li>Contato</li>
-            </a>
-        </ul>
+        <div class="menu">
+            <nav class="nav-list">
+            <a href="#home">Home</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
     </header>
 
+    <!--Home-->
+    <section id="home">
+        <div class="home-info">
+          <h2>Olá, sou Lucas</h2>
+          <span class="home-position">Analista de PCM / Projetista</span>
+          <span class="home-resume">
+            <p>Graduado em Engenharia Mecatrônica industrial pelo IFSC.</p>
+            Tenho experiência com manutenção industrial e projetos mecânicos.
+            <p>Entusiata de tecnologia, desenvolvendo sites e soluções web.</p>
+          </span>
+
+          <button>
+            <a href="#contato">Contate-me</a>
+          </button>
+        </div>
+        <div class="home-img">
+          <img src="./Lucas.JPG" alt="Foto de perfil">
+        </div>
+      </section>
+  
+      <!-- PROJECTS -->
+  
+      <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="project-img">
+                <img src="./cad 3d.jpg" alt="modelamento">
+              </div>
+              <div class="project-info">
+                <h2>Projetos Mecânicos</h2>
+                <p>Desenho em 3D de peças, conjuntos mecânicos e máquinas em geral.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-img">
+                <img src="./Projeto mec.JPG" alt="paquimetro e peça">
+              </div>
+              <div class="project-info">
+                <h2>Detalhamento</h2>
+                <p>Detalhamento de desenhos técnicos para fabricação.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-img">
+                <img src="./automação.JPG" alt="Foto automação">
+              </div>
+              <div class="project-info">
+                <h2>Automação industrial</h2>
+                <p>Retrofitting, industria 4.0 e melhoria de processos </p>
+              </div>
+            </div>
+          </div>
+        
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  
+    <!-- CONTACT -->
+  
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <input type="text" placeholder="Digite seu nome" />
+        <input type="email" placeholder="Digite seu e-mail" />
+        <textarea cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+        <button>Enviar</button>
+      </form>
+
     <main>
-        <aside>
-        <h2><span>Oi,</span></h2>
-        <h2>Sou Lucas e esse é meu primeiro portfólio.</h2>
-        </aside>
-        <article>
-            <img src="vw.jpg" alt="imagem">
-        </article>
+        <footer>
+            <p>Desenvolvido Por Lucas Gaio</p>
+        </footer>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
